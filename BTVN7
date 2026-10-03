@@ -1,0 +1,143 @@
+BÀI LÀM: CHUẨN HÓA CÁCH ĐẶT TÊN FILE/THƯ MỤC CHO DỰ ÁN CINEBOOK
+PHẦN 1: PHÂN TÍCH VẤN ĐỀ
+Trong quá trình phát triển phần mềm, cách đặt tên file cần thống nhất, dễ đọc, dễ tìm kiếm và thuận tiện khi sử dụng trong code hoặc Terminal. Với dự án CineBook, nhóm thống nhất sử dụng quy tắc snake_case.
+Quy tắc snake_case
+snake_case có các đặc điểm:
+Viết chữ thường.
+Không sử dụng dấu tiếng Việt.
+Không sử dụng khoảng trắng.
+Các từ được ngăn cách bằng dấu gạch dưới _.
+Phần mở rộng của file cũng nên viết chữ thường.
+Không sử dụng nhiều kiểu đặt tên khác nhau trong cùng một dự án.
+Tên file nên ngắn gọn nhưng vẫn thể hiện được nội dung của file.
+Ví dụ:
+poster_phim_hai.jpg
+icon_tai_khoan.svg
+avengers_end_game.png
+
+1. Phân tích từng tên file
+File 1: Poster Phim Hài.jpg
+Các lỗi:
+Có chữ hoa: Poster Phim
+Có khoảng trắng giữa các từ.
+Có dấu tiếng Việt: Hài.
+Cách viết chưa phù hợp với snake_case.
+Vấn đề: Khi sử dụng Terminal hoặc đưa tên file vào code, khoảng trắng có thể khiến đường dẫn bị hiểu thành nhiều phần nếu không đặt trong dấu ngoặc kép. Ký tự tiếng Việt cũng có thể gây bất tiện khi làm việc trong một số môi trường hoặc hệ thống khác nhau.
+Tên chuẩn:
+poster_phim_hai.jpg
+
+File 2: Avengers_end_game_final_2.PNG
+Các lỗi:
+Chữ đầu tiên viết hoa: Avengers.
+Phần mở rộng .PNG viết hoa, trong khi quy ước đã chọn là chữ thường.
+Từ final có thể khiến tên file khó quản lý nếu sau này tiếp tục xuất hiện final_final, final_2, final_new... Tuy nhiên, trong phạm vi bài này, final_2 vẫn có thể giữ lại vì nó đang phân biệt phiên bản.
+Điểm đúng: File đã sử dụng dấu _, phù hợp với snake_case.
+Tên chuẩn:
+avengers_end_game_final_2.png
+
+File 3: LậtMặt6-Bảnchuẩn.jpeg
+Các lỗi:
+Có dấu tiếng Việt: LậtMặt, Bảnchuẩn.
+Có chữ hoa.
+Không có dấu phân cách rõ ràng giữa Lật, Mặt, 6, Bản, chuẩn.
+Sử dụng dấu gạch ngang - trong khi nhóm đã chọn snake_case.
+Bảnchuẩn viết liền hai từ khiến tên file khó đọc.
+Tên chuẩn:
+lat_mat_6_ban_chuan.jpeg
+Trong đó:
+Lật → lat
+Mặt → mat
+6 giữ nguyên
+Bản → ban
+chuẩn → chuan
+
+File 4: icon tài khoản.SVG
+Các lỗi:
+Có khoảng trắng giữa icon và tài khoản.
+Có dấu tiếng Việt.
+Phần mở rộng .SVG viết hoa.
+Tên file chưa theo snake_case.
+Tên chuẩn:
+icon_tai_khoan.svg
+
+PHẦN 2: CHUẨN HÓA TOÀN BỘ FILE
+Nhóm thống nhất sử dụng snake_case cho tất cả các file.
+STT
+Tên file ban đầu
+Lỗi chính
+Tên file sau khi chuẩn hóa
+1
+Poster Phim Hài.jpg
+Khoảng trắng, chữ hoa, tiếng Việt có dấu
+poster_phim_hai.jpg
+2
+Avengers_end_game_final_2.PNG
+Chữ hoa, đuôi file viết hoa
+avengers_end_game_final_2.png
+3
+LậtMặt6-Bảnchuẩn.jpeg
+Chữ hoa, tiếng Việt có dấu, dấu -, viết liền từ
+lat_mat_6_ban_chuan.jpeg
+4
+icon tài khoản.SVG
+Khoảng trắng, chữ hoa, tiếng Việt có dấu
+icon_tai_khoan.svg
+
+Danh sách sau khi chuẩn hóa
+poster_phim_hai.jpg
+avengers_end_game_final_2.png
+lat_mat_6_ban_chuan.jpeg
+icon_tai_khoan.svg
+
+PHẦN 3: VÌ SAO CẦN CHUẨN HÓA TÊN FILE?
+Việc chuẩn hóa tên file không chỉ để nhìn đẹp mà còn giúp quá trình lập trình và quản lý dự án thuận tiện hơn.
+1. Dễ sử dụng trong code
+Ví dụ khi lập trình Backend hoặc Frontend, lập trình viên có thể gọi:
+/images/poster_phim_hai.jpg
+thay vì phải xử lý tên có dấu hoặc khoảng trắng.
+2. Dễ sử dụng trong Terminal
+Tên:
+poster_phim_hai.jpg
+có thể sử dụng trực tiếp mà không cần xử lý khoảng trắng.
+Trong khi tên:
+Poster Phim Hài.jpg
+có khoảng trắng nên khi nhập lệnh Terminal phải chú ý đến cách xử lý đường dẫn.
+3. Tránh lỗi do khác biệt chữ hoa và chữ thường
+Một số hệ điều hành hoặc môi trường phát triển có thể phân biệt chữ hoa và chữ thường. Ví dụ:
+icon_tai_khoan.svg
+và:
+Icon_Tai_Khoan.SVG
+có thể được xem là hai tên khác nhau trong một số môi trường.
+Việc thống nhất chữ thường giúp hạn chế lỗi khi lập trình.
+4. Dễ tìm kiếm và quản lý
+Khi dự án CineBook có hàng trăm hoặc hàng nghìn hình ảnh, việc thống nhất tên giúp lập trình viên dễ tìm kiếm và phân loại file.
+Ví dụ:
+poster_phim_hai.jpg
+poster_phim_hanh_dong.jpg
+poster_phim_tinh_cam.jpg
+poster_phim_kinh_di.jpg
+Nhìn vào tên file có thể hiểu ngay nội dung.
+5. Dễ làm việc nhóm
+Nếu mỗi thành viên đặt tên theo một cách khác nhau, dự án sẽ nhanh chóng trở nên lộn xộn:
+Poster Phim Hài.jpg
+poster-phim-hanh-dong.jpg
+POSTER_PHIM_TINH_CAM.JPG
+posterPhimKinhDi.jpeg
+Sau khi thống nhất:
+poster_phim_hai.jpg
+poster_phim_hanh_dong.jpg
+poster_phim_tinh_cam.jpg
+poster_phim_kinh_di.jpeg
+mọi thành viên đều biết cách đặt tên mới.
+
+PHẦN 4: KẾT LUẬN
+Qua tình huống của CineBook, có thể thấy các file ban đầu mắc nhiều lỗi như sử dụng tiếng Việt có dấu, khoảng trắng, chữ hoa và nhiều kiểu ký tự phân cách khác nhau. Những cách đặt tên này có thể gây khó khăn khi lập trình, sử dụng Terminal và quản lý dự án.
+Nhóm quyết định sử dụng thống nhất quy tắc snake_case, với nguyên tắc:
+Chữ thường + không dấu + không khoảng trắng + các từ cách nhau bằng _ + phần mở rộng viết thường.
+Vì vậy, 4 file được chuẩn hóa thành:
+poster_phim_hai.jpg
+avengers_end_game_final_2.png
+lat_mat_6_ban_chuan.jpeg
+icon_tai_khoan.svg
+Cách đặt tên này giúp dự án CineBook rõ ràng, nhất quán, dễ quản lý và thuận tiện hơn cho lập trình viên khi sử dụng code, Terminal và làm việc nhóm.
+
